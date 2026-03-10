@@ -201,7 +201,7 @@
                             android:textColor="@color/primary_variant"
                             android:textSize="14sp"
                             android:textStyle="italic"
-                            tools:text="\"It was pure serendipity that we found the perfect venue.\"" />
+                            tools:text="It was pure serendipity that we found the perfect venue." />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
