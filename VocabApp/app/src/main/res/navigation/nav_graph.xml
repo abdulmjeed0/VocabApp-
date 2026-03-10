@@ -39,7 +39,7 @@
             app:exitAnim="@anim/fade_out">
             <argument
                 android:name="wordId"
-                android:defaultValue="-1"
+                android:defaultValue="-1L"
                 app:argType="long" />
         </action>
         <action
@@ -78,7 +78,7 @@
         tools:layout="@layout/fragment_add_word">
         <argument
             android:name="wordId"
-            android:defaultValue="-1"
+            android:defaultValue="-1L"
             app:argType="long" />
     </fragment>
 
