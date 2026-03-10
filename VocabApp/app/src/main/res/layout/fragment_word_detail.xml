@@ -141,7 +141,7 @@
                         android:textColor="@color/primary_variant"
                         android:textSize="15sp"
                         android:textStyle="italic"
-                        tools:text="\"It was pure serendipity.\"" />
+                        tools:text="It was pure serendipity." />
 
                     <TextView
                         android:layout_width="wrap_content"
