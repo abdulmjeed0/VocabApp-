@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="60dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/tv_greeting"
+                style="@style/TextHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/on_surface_medium"
+                android:textSize="16sp"
+                tools:text="Good morning" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/TextDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                tools:text="Tuesday, March 10" />
+
+            <TextView
+                android:id="@+id/tv_motivation"
+                style="@style/TextBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_motivation"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/primary_variant"
+                tools:text="Every word you learn opens a new door 🚪" />
+        </LinearLayout>
+
+        <!-- Streak Card -->
+        <androidx.cardview.widget.CardView
+            style="@style/CardStyle.Streak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_streak_fire"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_fire"
+                    app:tint="@color/streak_orange" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_streak_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/streak_orange"
+                        android:textSize="36sp"
+                        tools:text="7" />
+
+                    <TextView
+                        android:id="@+id/tv_streak_label"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="day streak 🔥"
+                        android:textColor="@color/on_surface_medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_practice_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/mastered_green"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    tools:text="✅ Done!" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stats row -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_stats"
+            style="@style/CardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <!-- Total Words -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_words"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/primary"
+                        android:textSize="28sp"
+                        tools:text="42" />
+
+                    <TextView
+                        style="@style/TextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/tv_words_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="@color/mastered_green"
+                        android:textSize="11sp"
+                        tools:text="+3 today" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/divider" />
+
+                <!-- Mastered -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_mastered_words"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/mastered_green"
+                        android:textSize="28sp"
+                        tools:text="18" />
+
+                    <TextView
+                        style="@style/TextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mastered" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/divider" />
+
+                <!-- Due -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_due_words"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/due_amber"
+                        android:textSize="28sp"
+                        tools:text="5" />
+
+                    <TextView
+                        style="@style/TextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Practice Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_practice"
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Start Practice"
+            android:textAllCaps="false" />
+
+        <!-- Add Word Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_word"
+            style="Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="+ Add New Word"
+            android:textAllCaps="false"
+            android:textColor="@color/primary" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface"
+        android:paddingTop="24dp"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Word Detail"
+        app:titleTextAppearance="@style/TextTitle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Main card -->
+            <androidx.cardview.widget.CardView
+                style="@style/CardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_word"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="@color/on_background"
+                            android:textSize="36sp"
+                            tools:text="Serendipity" />
+
+                        <TextView
+                            android:id="@+id/tv_is_mastered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_mastered_chip"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="✓ Mastered"
+                            android:textColor="@color/mastered_green"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_pronunciation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
+                        android:textColor="@color/on_surface_medium"
+                        android:textSize="16sp"
+                        tools:text="[ser-en-DIP-i-tee]" />
+
+                    <TextView
+                        android:id="@+id/tv_part_of_speech"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/nunito"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_light"
+                        android:textSize="12sp"
+                        tools:text="noun" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/divider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Meaning"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.05" />
+
+                    <TextView
+                        android:id="@+id/tv_meaning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/nunito"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/on_surface"
+                        android:textSize="17sp"
+                        tools:text="The occurrence of events by chance in a happy or beneficial way" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Example"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.05" />
+
+                    <TextView
+                        android:id="@+id/tv_example_sentence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_example"
+                        android:fontFamily="@font/nunito"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="12dp"
+                        android:textColor="@color/primary_variant"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        tools:text="\"It was pure serendipity.\"" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Your Sentence"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.05" />
+
+                    <TextView
+                        android:id="@+id/tv_user_sentence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/nunito"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/on_surface_medium"
+                        android:textSize="15sp"
+                        tools:text="You haven't written a sentence yet." />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Stats card -->
+            <androidx.cardview.widget.CardView
+                style="@style/CardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_memory_strength"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp"
+                        tools:text="●●●○○" />
+
+                    <TextView
+                        android:id="@+id/tv_review_count"
+                        style="@style/TextCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Reviewed 5 times" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                style="Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:text="Edit Word"
+                android:textAllCaps="false"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

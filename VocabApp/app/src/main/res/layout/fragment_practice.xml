@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Practice screen -->
+    <LinearLayout
+        android:id="@+id/layout_practice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Progress bar area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="56dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Practice"
+                    android:textColor="@color/on_background"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    style="@style/TextBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="3 / 15" />
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
+                app:indicatorColor="@color/primary"
+                app:trackColor="@color/primary_container"
+                app:trackCornerRadius="3dp"
+                tools:progress="30" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <!-- Flashcard - Front (Question) -->
+            <LinearLayout
+                android:id="@+id/layout_front"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="280dp"
+                        android:orientation="vertical"
+                        android:padding="32dp">
+
+                        <TextView
+                            android:id="@+id/tv_part_of_speech"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_pos_chip"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:fontFamily="@font/nunito"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:letterSpacing="0.05"
+                            tools:text="noun" />
+
+                        <TextView
+                            android:id="@+id/tv_word"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:textColor="@color/on_background"
+                            android:textSize="40sp"
+                            tools:text="Serendipity" />
+
+                        <TextView
+                            android:id="@+id/tv_pronunciation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nunito"
+                            android:textColor="@color/on_surface_medium"
+                            android:textSize="16sp"
+                            tools:text="[ser-en-DIP-i-tee]" />
+
+                        <TextView
+                            android:id="@+id/tv_memory_strength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/nunito"
+                            android:textColor="@color/primary_light"
+                            android:textSize="18sp"
+                            tools:text="●●●○○" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/TextCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Tap to reveal the meaning" />
+            </LinearLayout>
+
+            <!-- Flashcard - Back (Answer) -->
+            <LinearLayout
+                android:id="@+id/layout_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="28dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_bold"
+                            android:textColor="@color/on_background"
+                            android:textSize="36sp"
+                            tools:text="Serendipity" />
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/tv_meaning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nunito"
+                            android:lineSpacingExtra="4dp"
+                            android:textColor="@color/on_surface"
+                            android:textSize="17sp"
+                            tools:text="The occurrence of events by chance in a happy or beneficial way" />
+
+                        <TextView
+                            android:id="@+id/tv_example"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/bg_example"
+                            android:fontFamily="@font/nunito"
+                            android:lineSpacingExtra="4dp"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="12dp"
+                            android:textColor="@color/primary_variant"
+                            android:textSize="14sp"
+                            android:textStyle="italic"
+                            tools:text="\"It was pure serendipity that we found the perfect venue.\"" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/TextCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="How well did you remember?" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Flip button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_flip"
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="Reveal Answer"
+            android:textAllCaps="false" />
+
+        <!-- Rating buttons -->
+        <LinearLayout
+            android:id="@+id/layout_rating_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_again"
+                style="@style/ButtonRating.Again"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="Again"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_hard"
+                style="@style/ButtonRating.Hard"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:text="Hard"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_good"
+                style="@style/ButtonRating.Good"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:text="Good"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_easy"
+                style="@style/ButtonRating.Easy"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="Easy"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Completion screen -->
+    <LinearLayout
+        android:id="@+id/layout_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_complete"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="celebration.json"
+            app:lottie_loop="false" />
+
+        <TextView
+            android:id="@+id/tv_completion_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:textColor="@color/on_background"
+            android:textSize="28sp"
+            tools:text="Outstanding! 🌟" />
+
+        <TextView
+            android:id="@+id/tv_completion_stats"
+            style="@style/TextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            tools:text="Reviewed 15 words · 87% accuracy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:text="Continue"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

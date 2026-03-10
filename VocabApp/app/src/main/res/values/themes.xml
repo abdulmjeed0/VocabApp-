@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Theme -->
+    <style name="Theme.VocabDaily" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+    </style>
+
+    <style name="Theme.VocabDaily.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.VocabDaily</item>
+    </style>
+
+    <!-- Card styles -->
+    <style name="CardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+    </style>
+
+    <style name="CardStyle.Primary">
+        <item name="cardBackgroundColor">@color/primary</item>
+    </style>
+
+    <style name="CardStyle.Streak">
+        <item name="cardBackgroundColor">@color/streak_light</item>
+        <item name="cardCornerRadius">20dp</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="ButtonPrimary" parent="Widget.Material3.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+    </style>
+
+    <style name="ButtonRating" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="ButtonRating.Again">
+        <item name="backgroundTint">@color/btn_again_light</item>
+        <item name="android:textColor">@color/btn_again</item>
+    </style>
+
+    <style name="ButtonRating.Hard">
+        <item name="backgroundTint">@color/btn_hard_light</item>
+        <item name="android:textColor">@color/btn_hard</item>
+    </style>
+
+    <style name="ButtonRating.Good">
+        <item name="backgroundTint">@color/btn_good_light</item>
+        <item name="android:textColor">@color/btn_good</item>
+    </style>
+
+    <style name="ButtonRating.Easy">
+        <item name="backgroundTint">@color/btn_easy_light</item>
+        <item name="android:textColor">@color/btn_easy</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="TextDisplay">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextHeadline">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/on_surface_medium</item>
+        <item name="android:fontFamily">@font/nunito</item>
+    </style>
+
+    <style name="TextCaption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/on_surface_low</item>
+        <item name="android:fontFamily">@font/nunito</item>
+    </style>
+
+    <!-- Input styles -->
+    <style name="TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+</resources>
